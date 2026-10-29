@@ -6,8 +6,8 @@ public class Factory {
     public boolean isOpen = true;
     public Donuts DonutOrder1;
     public Donuts DonutOrder2;
-
-
+   public int randomnumber;
+    public int randomnumber2;
     //todo: make 2 more variables called isOpen and yearFounded
     //What data type do we need? Give the variable values
     public static void main(String[] args) {
@@ -24,9 +24,10 @@ public class Factory {
         System.out.println("Welcome to Max's factory!");
         System.out.println("The factory was founded in "+yearFounded);
         System.out.println("It is "+ isOpen+ " that the factory is open ");
-
+        randomnumber = (int)(Math.random() * 100)+1;
+        randomnumber2 = (int)(Math.random() * 45)+1;
         //make an object of type Donuts
-        DonutOrder1 = new Donuts();
+        DonutOrder1 = new Donuts(randomnumber);
         System.out.println(DonutOrder1.numberOfDonuts);
         //todo: print all of the instance variables as donuts
 
@@ -36,12 +37,13 @@ public class Factory {
 
         //extra challenge: have words print that explain what the variables are
 
-        DonutOrder2 = new Donuts();
+        DonutOrder2 = new Donuts(randomnumber2);
         System.out.println(DonutOrder2.numberOfDonuts);
         System.out.println(DonutOrder2.frostingType);
         System.out.println(DonutOrder2.hasFilling);
         DonutOrder2.numberOfDonuts = DonutOrder2.numberOfDonuts + 1;
 
+        DonutOrder2.printinfo();
     }
 
     //end of factory method

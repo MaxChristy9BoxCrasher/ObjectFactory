@@ -9,10 +9,15 @@ public class Donuts {
     //number of donuts
     public int numberOfDonuts;
 
-    public Donuts() {
+    public Donuts(int pnumberofdonuts) {
         frostingType = "Boston Creme";
         hasFilling = true;
-        numberOfDonuts = 3;
+        numberOfDonuts = pnumberofdonuts;
+    }
+    public void printinfo() {
+            System.out.println("frosting type is" + frostingType);
+        System.out.println("has filling" + hasFilling);
+        System.out.println("the number of donuts is" + numberOfDonuts);
 
         }
-    }
+        }
