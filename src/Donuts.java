@@ -9,9 +9,9 @@ public class Donuts {
     //number of donuts
     public int numberOfDonuts;
 
-    public Donuts(int pnumberofdonuts) {
-        frostingType = "Boston Creme";
-        hasFilling = true;
+    public Donuts(int pnumberofdonuts, String pfrostingType, boolean phasFilling) {
+        frostingType = pfrostingType;
+        hasFilling = phasFilling;
         numberOfDonuts = pnumberofdonuts;
     }
     public void printinfo() {
